@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | BookNest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen" style="background-image: url('https://r4.wallpaperflare.com/wallpaper/903/295/641/3d-ancient-lost-in-a-good-book-abstract-photography-hd-art-wallpaper-f251f2e0bd169e9bfa58f25500d889e2.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black/10 backdrop-blur-sm flex items-center justify-center">
+
+    <div class="bg-white/60 p-10 rounded-2xl shadow-lg w-full max-w-lg">
+        <h1><a href="index.php"><img src="https://i.ibb.co/Kc0pZmw6/logo-no-background.png" alt="booknest" style="display: block; margin: 0 auto;width: 250px;" ></a></h1>
+<br>
+      <h2 class="text-3xl font-extrabold text-center text-amber-800 mb-6">Login</h2>
+      <form action="login.php" method="POST" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" name="email" class="w-full border rounded px-3 py-2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Password</label>
+          <input type="password" name="password" class="w-full border rounded px-3 py-2" required />
+        </div>
+        <button type="submit" class="w-full bg-amber-800 text-white py-2 rounded hover:bg-amber-800">
+          Login
+        </button>
+      </form>
+      <p class="text-center mt-4 text-md">Don’t have an account? <a href="signup.html" class="text-amber-800">Register</a></p>
+    </div>
+  </div>
+</body>
+</html>

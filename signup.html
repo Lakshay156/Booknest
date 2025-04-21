@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | BookNest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen" style="background-image: url('https://r4.wallpaperflare.com/wallpaper/903/295/641/3d-ancient-lost-in-a-good-book-abstract-photography-hd-art-wallpaper-f251f2e0bd169e9bfa58f25500d889e2.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black/10 backdrop-blur-sm flex items-center justify-center">
+    <div class="bg-white/60 p-10 rounded-2xl shadow-lg w-full max-w-lg">
+
+        <h1><a href="index.php"><img src="https://i.ibb.co/Kc0pZmw6/logo-no-background.png" alt="booknest" style="display: block; margin: 0 auto;width: 250px;" ></a></h1>
+<br>
+      <h2 class="text-3xl font-extrabold text-center text-amber-800 mb-6">Register </h2>
+      <form id="registerForm" action="signup.php" method="POST" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">First Name</label>
+          <input type="text" name="firstname" class="w-full border rounded px-3 py-2 transition duration-200 ease-in-out hover:shadow-md"placeholder="Enter your first name" required />
+        </div>
+        <div>
+            <label class="block text-sm font-medium mb-1">Last Name</label>
+            <input type="text" name="lastname" class="w-full border rounded px-3 py-2 transition duration-200 ease-in-out hover:shadow-md" placeholder="Enter your last name" required />
+          </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Mobile Number</label>
+          <div class="flex">
+            <span class="inline-flex items-center px-3 text-gray-600 bg-gray-200 border border-r-0 rounded-l">
+              +91
+            </span>
+            <input type="tel" name="mobile" pattern="[0-9]{10}" maxlength="10" class="w-full border rounded-r px-3 py-2 transition duration-200 ease-in-out hover:shadow-md" placeholder="Enter your mobile number" required />
+        </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" name="email" class="w-full border rounded px-3 py-2 transition duration-200 ease-in-out hover:shadow-md"placeholder="Enter your email" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1"c >Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password"
+                 class="w-full border rounded px-3 py-2 transition duration-200 ease-in-out hover:shadow-md" 
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" 
+                 title="Password must be at least 8 characters and include one uppercase letter, one lowercase letter, one number, and one special character." 
+                 required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password"
+                 class="w-full border rounded px-3 py-2 transition duration-200 ease-in-out hover:shadow-md" 
+                 required />
+        </div>
+        <button type="submit" class="w-full bg-amber-800 text-white py-2 rounded hover:bg-amber-800 transition duration-200 ease-in-out">
+          Register
+        </button>
+      </form>
+      <p class="text-center mt-4 text-md">Already have an account? <a href="login.html" class="text-amber-800">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Client-side validation for password match
+    const registerForm = document.getElementById('registerForm');
+    registerForm.addEventListener('submit', function(e) {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm_password').value;
+      if (password !== confirmPassword) {
+        e.preventDefault();
+        alert('Passwords do not match. Please re-enter.');
+      }
+    });
+  </script>
+</body>
+</html>
